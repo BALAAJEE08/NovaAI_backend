@@ -33,8 +33,10 @@ app.use(helmet());
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
-    credentials: true
+    origin: [
+      "https://nova-ai-frontend-pearl.vercel.app/"
+    ],
+    credentials: true,
   })
 );
 
