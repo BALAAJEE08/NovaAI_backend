@@ -1,6 +1,6 @@
 import dns from "node:dns/promises";
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
-import cors from "cors";
+import cors from "cors"
 import dotenv from "dotenv";
 import express from "express";
 import helmet from "helmet";
@@ -34,12 +34,12 @@ app.use(helmet());
 app.use(
   cors({
     origin: [
-      "https://nova-ai-frontend-pearl.vercel.app/"
+      "http://localhost:5173",
+      "https://nova-ai-frontend-pearl.vercel.app",
     ],
     credentials: true,
   })
 );
-
 app.use(
   rateLimit({
     windowMs: 15 * 60 * 1000,
